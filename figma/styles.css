@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+header {
+    background-color: rgba(102, 132, 118, 0.8); /* Fondo semi-transparente */
+    color: white;
+    padding: 1rem;
+    text-align: left;
+    position: fixed; /* Fijado en la parte superior */
+    top: 0; /* Posición en la parte superior */
+    width: 100%; /* Ancho completo */
+    z-index: 100; /* Asegura que esté por encima de otros elementos */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+}
+
+header h1 {
+    float: left;
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 40px; /* Para alinear verticalmente con el título */
+    display: block;
+}
+
+main {
+    padding: 0; /* Quitamos el padding para que el banner ocupe todo el ancho */
+}
+
+.banner {
+    position: relative; /* Posicionamiento relativo para el banner */
+    width: 100%;
+    padding-top: 0; /* Espacio para compensar el header fijo */
+}
+
+.slides {
+    width: 100%;
+    display: block;
+    height: auto;
+}
+
+.titulo-productos {
+    text-align: center;
+    margin: 2rem 0;
+    padding: 0 2rem;
+}
+
+.productos {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 50px;
+    padding: 0 2rem;
+    flex-wrap: wrap; /* Para dispositivos móviles */
+}
+
+.producto {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    text-align: center;
+    width: 30%;
+    flex: 1;
+    margin: 10px;
+    min-width: 250px; /* Ancho mínimo para responsive */
+}
+
+.producto img {
+    max-width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    max-height: 150px; /* Ajustar la altura máxima según tus necesidades */
+}
+
+.producto h3 {
+    margin-top: 0.5rem;
+    font-size: 1.2em;
+}
+
+.producto p {
+    margin: 0;
+    font-size: 1em;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    header h1 {
+        float: none;
+        text-align: center;
+    }
+    
+    nav ul {
+        justify-content: center;
+        margin-top: 1rem;
+    }
+    
+    .productos {
+        flex-direction: column;
+    }
+    
+    .producto {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
